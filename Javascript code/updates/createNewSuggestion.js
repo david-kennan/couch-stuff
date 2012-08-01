@@ -7,9 +7,8 @@ function(doc, req) {
     newDoc.suggestion = receivedObj.suggestion;
     newDoc.appVersion = receivedObj.version;
     var docCreation = new Date();
-    var dateArray = [docCreation.getUTCFullYear(), docCreation.getUTCMonth() + 1, docCreation.getUTCDate(), docCreation.getUTCMinutes(), docCreation.getUTCSeconds()];
-    newDoc.dateCreated = dateArray;
-    newDoc.lastModified = dateArray;
+    newDoc.dateCreated = docCreation;
+    newDoc.lastModified = docCreation;
     newDoc.FDLclass = 'SuggestionViaUI';
     newDoc.labels = [];
     newDoc.featureID = {};
